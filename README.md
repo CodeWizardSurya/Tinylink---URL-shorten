@@ -1,16 +1,11 @@
-Here is a **professional README.md** you can **copy–paste directly** to your GitHub repo.
-It explains **your exact code**, **your flow**, **your endpoints**, and **your project purpose** clearly and professionally.
-
----
 
 # 🚀 TinyLink – URL Shortener
 
 A simple and fast URL shortening application built using **Node.js**, **Express**, **MongoDB**, and **React**.
 This project lets users create short URLs, view analytics (click count), and manage all their generated links.
 
----
 
-## 📌 Features
+📌 Features
 
 * 🔗 **Create Short URLs**
 * 👀 **Track Clicks** for each shortened URL
@@ -22,7 +17,7 @@ This project lets users create short URLs, view analytics (click count), and man
 
 ---
 
-## 🏗️ Project Structure
+🏗️ Project Structure
 
 ```
 TinyLink/
