@@ -1,10 +1,19 @@
 
- 🚀 TinyLink – URL Shortener
+# 🚀 TinyLink – URL Shortener
 
-A simple and fast URL shortening application built using **Node.js**, **Express**, **MongoDB**, and **React**.
+A simple and fast URL shortening application built using **Node.js**, **Express**, **MongoDB**, and **React**.  
 This project lets users create short URLs, view analytics (click count), and manage all their generated links.
 
- 📌 Features
+---
+
+## 📌 Live Links
+
+- **Frontend (React + Vite)**: [https://tinylink-url-shorten-4pbpx72oi-surya-ks-projects-17937d73.vercel.app](https://tinylink-url-shorten-4pbpx72oi-surya-ks-projects-17937d73.vercel.app)  
+- **Backend (Node.js + Express)**: [https://tinylink-url-shorten.onrender.com](https://tinylink-url-shorten.onrender.com)
+
+---
+
+## 📌 Features
 
 * 🔗 **Create Short URLs**
 * 👀 **Track Clicks** for each shortened URL
@@ -16,9 +25,10 @@ This project lets users create short URLs, view analytics (click count), and man
 
 ---
 
-🏗️ Project Structure
+## 🏗️ Project Structure
 
 ```
+
 TinyLink/
 │
 ├── backend/
@@ -31,19 +41,23 @@ TinyLink/
 │       └── urlController.js
 │
 └── frontend/
-    ├── src/
-    │   ├── pages/
-    │   │   ├── Home.jsx
-    │   │   ├── Stats.jsx
-    │   ├── components/
-    │   │   └── LinkCard.jsx
-    │   ├── services/
-    │   │   └── api.js
-    │   └── App.jsx
+├── src/
+│   ├── pages/
+│   │   ├── Home.jsx
+│   │   ├── Stats.jsx
+│   ├── components/
+│   │   └── LinkCard.jsx
+│   ├── services/
+│   │   └── api.js
+│   └── App.jsx
 
-🔧 Backend Overview (Node.js + Express)
+````
 
-## 📌 1. URL Schema (MongoDB Model)
+---
+
+## 🔧 Backend Overview (Node.js + Express)
+
+### 📌 1. URL Schema (MongoDB Model)
 
 ```js
 const UrlSchema = new mongoose.Schema({
@@ -53,7 +67,7 @@ const UrlSchema = new mongoose.Schema({
   lastClicked: { type: Date, default: null },
   createdAt: { type: Date, default: Date.now }
 });
-```
+````
 
 ### **What this does**
 
@@ -64,9 +78,9 @@ const UrlSchema = new mongoose.Schema({
 
 ---
 
-## 📌 2. API Endpoints
+### 📌 2. API Endpoints
 
-### ▶️ **Create a Short URL**
+#### ▶️ Create a Short URL
 
 ```
 POST /api/links
@@ -92,7 +106,7 @@ Response:
 
 ---
 
-### ▶️ **Get All Links**
+#### ▶️ Get All Links
 
 ```
 GET /api/links
@@ -102,7 +116,7 @@ Returns an array of all stored short URLs.
 
 ---
 
-### ▶️ **Get Statistics for a Short Code**
+#### ▶️ Get Statistics for a Short Code
 
 ```
 GET /api/links/:code
@@ -119,7 +133,7 @@ Returns:
 
 ---
 
-### ▶️ **Delete a Short Link**
+#### ▶️ Delete a Short Link
 
 ```
 DELETE /api/links/:code
@@ -127,7 +141,7 @@ DELETE /api/links/:code
 
 ---
 
-### ▶️ **Redirect to Original URL**
+#### ▶️ Redirect to Original URL
 
 ```
 GET /:code
@@ -135,13 +149,13 @@ GET /:code
 
 * Increases `clicks`
 * Updates `lastClicked`
-* Redirects to `longUrl`
+* Redirects to original `longUrl`
 
 ---
 
- 🎨 Frontend Overview (React)
+## 🎨 Frontend Overview (React + Vite)
 
-## 📌 1. `api.js` – API Service Layer
+### 📌 1. `api.js` – API Service Layer
 
 Handles all API calls:
 
@@ -156,7 +170,8 @@ export async function deleteLink(code) { ... }
 ✔ All REST operations from a single file
 
 ---
- 📌 2. Stats Page (`Stats.jsx`)
+
+### 📌 2. Stats Page (`Stats.jsx`)
 
 ```js
 const { code } = useParams();
@@ -170,7 +185,7 @@ async function loadStats() {
 }
 ```
 
-### **What it does**
+**What it does:**
 
 * Reads the `shortCode` from the URL
 * Fetches stats from backend
@@ -182,9 +197,9 @@ async function loadStats() {
 
 ---
 
-⚙️ Installation & Setup
+## ⚙️ Installation & Setup
 
-📍 Backend Setup
+### 📍 Backend Setup
 
 ```bash
 cd backend
@@ -200,17 +215,18 @@ PORT=5000
 ```
 
 ---
-📍 Frontend Setup
+
+### 📍 Frontend Setup
 
 ```bash
-cd frontend
+cd frontend/my-url
 npm install
 npm run dev
 ```
 
 ---
 
-🧠 How the Project Works (Workflow)
+## 🧠 How the Project Works (Workflow)
 
 1. User enters a **long URL** and optional **custom short code**
 2. Frontend sends it to backend → `/api/links`
@@ -224,7 +240,7 @@ npm run dev
 
 ---
 
- 📝 Tech Stack
+## 📝 Tech Stack
 
 * **Node.js**
 * **Express**
@@ -235,8 +251,12 @@ npm run dev
 
 ---
 
-🙌 Author
+## 🙌 Author & Contact
 
-**Surya K**
-Full Stack Developer
+**Surya K** – Full Stack Developer
+
+📧 Email: [surya.devgenius@gmail.com](mailto:surya.devgenius@gmail.com)
+💼 LinkedIn: [linkedin.com/in/surya-k272004](https://linkedin.com/in/surya-k272004)
+🐙 GitHub: [github.com/CodeWizardSurya](https://github.com/CodeWizardSurya)
+
 
