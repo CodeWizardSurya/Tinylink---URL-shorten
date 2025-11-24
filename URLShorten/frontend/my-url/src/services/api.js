@@ -22,5 +22,3 @@ export async function getStats(code) {
 export async function deleteLink(code) {
   return fetch(`${API}/api/links/${code}`, { method: "DELETE" });
 }
-
-
